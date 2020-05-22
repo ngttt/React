@@ -1,19 +1,14 @@
 import React, { Component } from 'react'
+import './styles.css'
 
 export default class ListItem extends Component {
    
-updateParent = () => {
-    this.props.updateParent();
-}
-
 render() {
+    const {item} = this.props;
+    const isDoneClass = item.isDone ? 'isDone' : '';
     return (
-        <div>
-
-             {/* <h1>This is a list of {this.props.name}</h1>
-            <button onClick={this.updateParent}>Click</button>  */}
-            {this.props.job}
-
+        <div className= {`list-item ${isDoneClass}`} onClick={this.props.onRemove}>
+             <p> {item.name}</p>
         </div>
     )
 }

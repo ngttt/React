@@ -1,0 +1,26 @@
+.list {
+    width: 500px;
+    margin: 20px auto;
+    padding-top: 24px;
+}
+
+.list-item.isDone {
+    text-decoration: line-through ;
+}
+
+.list-container {
+    display: flex;
+}
+
+/* 
+.list-item {
+    display: flex;
+}
+ p {
+    margin: 0;
+ }
+
+input {
+     margin: 0;
+     margin-right: 10px ;
+ } */

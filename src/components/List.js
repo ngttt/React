@@ -9,11 +9,10 @@ export default class List extends Component {
         return (
             <div className='list'>
 
-                {this.props.list.map((el) => {
-                    return <ListItem job={el.name}/>
+                {this.props.list.map((el,index) => {
+                    return <ListItem key={index} item={el} onRemove={() => this.props.removeItem(el.id)}/>
                 })
                 }
-                
                 
             </div>
         );
