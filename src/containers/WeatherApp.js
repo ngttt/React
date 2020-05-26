@@ -9,8 +9,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { Container, Grid, GridSpacing, Paper, CircularProgress, TextField } from '@material-ui/core';
 import moment from 'moment';
 // import DailyWeatherList from './components/DailyWeatherList';
-import CurrentWeather from './components/CurrentWeather';
-import DailyWeatherList from './components/DailyWeatherList';
+import CurrentWeather from '../components/CurrentWeather';
+import DailyWeatherList from '../components/DailyWeatherList';
 moment.locale();
 
 const useStyles = makeStyles((theme) => ({
@@ -34,7 +34,9 @@ export default class WeatherApp extends Component {
 	}
 
 	componentDidMount() {
-		this.getWeatherData();
+		this.getWeatherData(
+			
+		);
 	}
 
 	getWeatherData = async () => {
@@ -79,6 +81,7 @@ export default class WeatherApp extends Component {
 				</AppBar>
 				<Container maxWidth='md'>
                 <TextField id="standard-basic" label="City" />
+				{/* <Button onChange={}>Click</Button> */}
 					<Grid container spacing='2' style={{ marginTop: 30 }}>
                         {this.renderContent()}
 

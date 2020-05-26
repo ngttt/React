@@ -8,6 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Container, Grid, GridSpacing, Paper, CircularProgress } from '@material-ui/core';
 import moment from 'moment';
+moment.locale();
 
 export default class DailyWeatherItem extends Component {
     render() {
