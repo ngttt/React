@@ -74,11 +74,11 @@ export default class WeatherApp extends Component {
 	render() {
 		return (
 			<div style={{ flexGrow: 1 }}>
-				<AppBar position='statics'>
+				{/* <AppBar position='statics'>
 					<Toolbar>
 						<Typography variant='h6'>MindX WeatherApp</Typography>
 					</Toolbar>
-				</AppBar>
+				</AppBar> */}
 				<Container maxWidth='md'>
                 <TextField id="standard-basic" label="City" />
 				{/* <Button onChange={}>Click</Button> */}

@@ -84,3 +84,36 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-bar ul {
+	display: flex;
+}
+
+.nav-logo {
+	display: flex;
+	background-color: chocolate;
+}
+
+.list-nav {
+	list-style: none;
+	padding-left: 40px;
+}
+
+.list-item {
+	text-decoration: none;
+	color: black;
+}
+
+.list-item:focus {
+	color: blanchedalmond;
+}
+
+.search {
+	margin-left: 730px;
+	margin-top: 15px;
+	width: 170px;
+	height: 30px;
+	background-color: chocolate;
+	border: none;
+	border-bottom: solid black 1px;
+}
