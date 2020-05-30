@@ -11,6 +11,7 @@ import moment from 'moment';
 // import DailyWeatherList from './components/DailyWeatherList';
 import CurrentWeather from '../components/CurrentWeather';
 import DailyWeatherList from '../components/DailyWeatherList';
+import { withRouter } from 'react-router-dom';
 moment.locale();
 
 const useStyles = makeStyles((theme) => ({
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export default class WeatherApp extends Component {
+export class WeatherApp extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -72,6 +73,9 @@ export default class WeatherApp extends Component {
 
 
 	render() {
+		const queryResult = new URLSearchParams(this.props.location.search);
+		const queryName = queryResult.get('name');
+		console.log(queryName);
 		return (
 			<div style={{ flexGrow: 1 }}>
 				{/* <AppBar position='statics'>
@@ -100,3 +104,5 @@ export default class WeatherApp extends Component {
 		);
 	}
 }
+
+export default withRouter(WeatherApp)

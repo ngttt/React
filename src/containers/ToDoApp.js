@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import List from '../components/List';
 import FromInput from '../components/Input';
+import { withRouter } from 'react-router-dom';
 
 const toDoList = [
 	{ id:1, name: 'Đi học', isDone: false },
@@ -12,7 +13,7 @@ const toDoList = [
 
 
 
-export default class App extends React.Component {
+class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -98,3 +99,5 @@ export default class App extends React.Component {
 		);
 	}
 }
+
+export default withRouter(App);
